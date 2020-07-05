@@ -2,10 +2,10 @@
 
 ### build
 ```
->$ stack build
+$> stack build
 ```
 
 ### exec
 ```
->$ stack exec exercise-exe
+$> stack exec exercise-exe
 ```
