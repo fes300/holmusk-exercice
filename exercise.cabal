@@ -1,0 +1,71 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 8699bbad7b2b0f318ed192d6c2aa44053c779eb40fafd04a34c387ad04a730b7
+
+name:           exercise
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/exercise#readme>
+homepage:       https://github.com/githubuser/exercise#readme
+bug-reports:    https://github.com/githubuser/exercise/issues
+author:         Federico Sordillo
+maintainer:     federicosordillo@gmail.com
+copyright:      2020 Federico Sordillo
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/exercise
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_exercise
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mwc-random >=0.14
+    , statistics >=0.15
+    , vector >=0.12
+  default-language: Haskell2010
+
+executable exercise-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_exercise
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , exercise
+    , mwc-random >=0.14
+    , statistics >=0.15
+    , vector >=0.12
+  default-language: Haskell2010
+
+test-suite exercise-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_exercise
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , exercise
+    , mwc-random >=0.14
+    , statistics >=0.15
+    , vector >=0.12
+  default-language: Haskell2010
